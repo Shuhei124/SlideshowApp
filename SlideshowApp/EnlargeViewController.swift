@@ -8,14 +8,17 @@
 import UIKit
 
 class EnlargeViewController: UIViewController {
-
+    @IBOutlet weak var enlarge: UIImageView!
+    var transimage: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        enlarge.image = transimage
         // Do any additional setup after loading the view.
     }
     
 
+    
     /*
     // MARK: - Navigation
 

@@ -78,6 +78,14 @@ class ViewController: UIViewController {
         }
     }
     
+    //画像パスの引き渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           // segueから遷移先のResultViewControllerを取得する
+           let enlargeViewController:EnlargeViewController = segue.destination as! EnlargeViewController
+           // 遷移先のResultViewControllerで宣言しているx, yに値を代入して渡す
+           enlargeViewController.transimage = imageArray[nowIndex]
+        }
+    
     
 }
 
