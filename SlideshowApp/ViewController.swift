@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         }
         imageView.image = imageArray[nowIndex]
         }
-
+    //*self入れる？入れない？
     @objc func changeImagePrev(){
         if nowIndex == 0{
             nowIndex = imageArray.count-1
@@ -52,17 +52,25 @@ class ViewController: UIViewController {
         }
     
     @IBAction func nextImage(_ sender: Any) {
+        if self.timer == nil {
         changeImageNext()
+        }
     }
 
     @IBAction func prevImage(_ sender: Any) {
+        if self.timer == nil {
         changeImagePrev()
+        }
     }
-    
+   
+    @IBAction func slideImage(_ sender: Any) {
+        changeImageNext()
+    }
+    //もっといいやり方があるはず。changeImageNextを以下のsenderに入れたらバグ発生したので、IBAAction無理やり作った。
     
     @IBAction func slideshowImage(_ sender: Any) {
         if self.timer == nil {
-            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(nextImage(_:)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(slideImage(_:)), userInfo: nil, repeats: true)
         }
         else{
             self.timer.invalidate()
