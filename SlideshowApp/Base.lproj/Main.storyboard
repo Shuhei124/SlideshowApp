@@ -21,18 +21,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <segue destination="onS-SU-xvg" kind="show" id="ipn-Gy-NUC"/>
+                                    <action selector="nextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rk5-af-Qmd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWB-La-U61">
                                 <rect key="frame" x="184" y="627" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="prevImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6C-gM-Mgo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5w-cX-XQi">
                                 <rect key="frame" x="280" y="627" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生/停止"/>
+                                <connections>
+                                    <action selector="slideshowImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nt2-3X-GEr"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msa-JH-HYc">
                                 <rect key="frame" x="76" y="238" width="262" height="192"/>
@@ -55,7 +61,7 @@
             <objects>
                 <viewController id="onS-SU-xvg" customClass="EnlargeViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9YR-uO-OKO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov2-Zz-a1n">
