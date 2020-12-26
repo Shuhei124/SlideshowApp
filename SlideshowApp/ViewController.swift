@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     // タイマー
     var timer: Timer!
     
-    // タイマー用の時間のための変数
-    var timer_sec: Float = 0
     
     var imageArray:[UIImage] = [
         UIImage(named: "img01.jpg")!,
