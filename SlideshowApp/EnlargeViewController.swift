@@ -10,6 +10,7 @@ import UIKit
 class EnlargeViewController: UIViewController {
     @IBOutlet weak var enlarge: UIImageView!
     var transimage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
