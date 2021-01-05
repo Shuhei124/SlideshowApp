@@ -71,7 +71,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fwdButton" destination="FVw-56-VE9" id="85O-Ab-X6Y"/>
                         <outlet property="imageView" destination="Msa-JH-HYc" id="kzk-iZ-NHz"/>
+                        <outlet property="prevButton" destination="VWB-La-U61" id="JEa-3S-BGu"/>
+                        <outlet property="startstopButton" destination="k5w-cX-XQi" id="h2B-tB-YJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
