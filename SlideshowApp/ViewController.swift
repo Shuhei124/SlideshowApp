@@ -17,6 +17,7 @@
         @IBOutlet weak var fwdButton: UIButton!
         @IBOutlet weak var prevButton: UIButton!
         @IBOutlet weak var startstopButton: UIButton!
+       
         
         var imageArray:[UIImage] = [
             UIImage(named: "img01.jpg")!,
@@ -31,6 +32,8 @@
             imageView.image = imageArray[0]
             startstopButton.setTitle("再生", for: .normal)
             //*初期の画面表示をここに入れるのは合っている？→あっている(質問回答)
+            
+            
         }
 
         @IBAction func unwind(_ segue: UIStoryboardSegue) {
@@ -77,6 +80,8 @@
         //timerの前のselfは見にくくなるのでいらない。(質問回答)
                 fwdButton.isEnabled = false
                 prevButton.isEnabled = false
+                fwdButton.setTitleColor(UIColor.gray, for: .normal)
+                prevButton.setTitleColor(UIColor.gray, for: .normal)
                 startstopButton.setTitle("停止", for: .normal)
             }
             else{
@@ -84,6 +89,8 @@
                 timer = nil
                 fwdButton.isEnabled = true
                 prevButton.isEnabled = true
+                fwdButton.setTitleColor(UIColor.systemBlue, for: .normal)
+                prevButton.setTitleColor(UIColor.systemBlue, for: .normal)
                 startstopButton.setTitle("再生", for: .normal)
             }
         }
@@ -94,14 +101,18 @@
             let enlargeViewController:EnlargeViewController = segue.destination as! EnlargeViewController
             // 遷移先のResultViewControllerで宣言しているtransimageに値を代入して渡す
             enlargeViewController.transimage = imageArray[nowIndex]
-            
+            if timer == nil {
+            }
+            else{
             timer.invalidate()
             timer = nil
             fwdButton.isEnabled = true
             prevButton.isEnabled = true
+            fwdButton.setTitleColor(UIColor.systemBlue, for: .normal)
+            prevButton.setTitleColor(UIColor.systemBlue, for: .normal)
             startstopButton.setTitle("再生", for: .normal)
             }
         
         
     }
-
+    }
